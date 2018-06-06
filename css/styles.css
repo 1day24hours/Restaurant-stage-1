@@ -103,10 +103,35 @@ nav h1 a {
   width: 100%;
   background-color: #ccc;
 }
+#maincontent #map-container {
+  height: 400px;
+  width: 100%;
+  background-color: #ccc;
+}
+
+#maincontent-top > #map-container, #maincontent-top > #map-container > #map {
+  height: 200px;
+}
+
+.inside #map-container {
+  background: blue none repeat scroll 0 0;
+  width: 100%;
+}
+
+/* Set mobile-phone resopnsive layout */
+@media (min-width:700px)  { 
+  #maincontent-top > #map-container, #maincontent-top > #map-container > #map {
+    height: 650px;
+  }
+ }
+
 /* ====================== Restaurant Filtering ====================== */
 .filter-options {
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
   width: 100%;
-  height: 50px;
   background-color: #3397DB;
   align-items: center;
 }
@@ -126,11 +151,32 @@ nav h1 a {
   letter-spacing: 0;
   margin: 10px;
   padding: 0 10px;
-  width: 200px;
+  width: 90%;
 }
+
+.column {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+@media (min-width:481px)  { 
+  .filter-options {
+    flex-direction: row;
+  }
+  .filter-options select {
+    display: flex;
+    flex-grow: 1;
+  }
+ }
 
 /* ====================== Restaurant Listing ====================== */
 #restaurants-list {
+  /* display: flex; 
+  display: -webkit-flex; */
+  /* flex: wrap; */
+  /* justify-content: center; */
   background-color: #f3f3f3;
   list-style: outside none none;
   margin: 0;
@@ -180,6 +226,12 @@ nav h1 a {
   text-align: center;
   text-decoration: none;
   text-transform: uppercase;
+}
+
+@media (min-width:700px)  { 
+  #restaurants-list {
+    flex-direction: row;
+  }
 }
 
 /* ====================== Restaurant Details ====================== */
