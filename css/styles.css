@@ -231,6 +231,9 @@ nav h1 a {
 @media (min-width:700px)  { 
   #restaurants-list {
     flex-direction: row;
+    display: flex;  /* 别忘记设置该属性，否则不能应用 flex 布局 */
+    flex-wrap: wrap; /* 让被布局的元素自动“换行” */
+    justify-content: space-around; /* 让被布局的元素之间自动保留一些间隔 */
   }
 }
 

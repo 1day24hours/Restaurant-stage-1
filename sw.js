@@ -35,7 +35,7 @@ self.addEventListener('install',  event => {
                  console.log('Opened cache');
                  return cache.addAll(urlsToCache);
         }).then( ()=> {
-            return skipWaiting();
+            return self.skipWaiting();
         })
     );
 });
@@ -45,6 +45,18 @@ self.addEventListener('install',  event => {
 
 // Activate
 self.addEventListener('activate', event => {
+    //delet extra cache version
+    event.waitUntil(
+        caches.keys().then(keys => {
+            return Promise.all(
+                key.map(key => {
+                    if (key != cacheName) {
+                        return caches.delete(key);
+                    }
+                })
+            )
+        })
+    )
     //The claim() method causes those pages to be controlled immediately. 
     event.waitUntil(clients.claim());
 });
