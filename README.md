@@ -10,9 +10,9 @@ For the **Restaurant Reviews** projects, you will incrementally convert a static
 
 ### How to Run
 
-1.Python 2: python -m SimpleHTTPServer 8000 
-2.Python 3: python3 -m http.server 8000
-3.Local browser: http://localhost:8000
+1. Python 2: python -m SimpleHTTPServer 8000 
+2. Python 3: python3 -m http.server 8000
+3. Local browser: http://localhost:8000
 
 ### Specification
 
