@@ -2,6 +2,7 @@
 ---
 #### _Three Stage Course Material Project - Restaurant Reviews_
 
+![RestaurantReviews](https://github.com/1day24hours/Restaurant-stage-1/blob/master/gif/Restaurant%20Reviews.gif)
 
 
 ## 项目概况 & 心得 Project Overview: Stage 1 & Experience
